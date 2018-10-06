@@ -10,6 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var centerYAnchor : NSLayoutConstraint?
+    var centerXAnchor : NSLayoutConstraint?
+    var bottomAnchor : NSLayoutConstraint?
+    var stackViewTopAnchor : NSLayoutConstraint?
+    var stackViewBottomAnchor : NSLayoutConstraint?
+    var stackView : UIStackView = UIStackView()
+    
     let brandingImage : UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit
@@ -40,7 +47,7 @@ class ViewController: UIViewController {
         button.setTitle("LOGIN", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = UIColor(red: 143/255, green: 11/255, blue: 65/255, alpha: 1.0)
+        button.backgroundColor = UIColor.dakshThemeColor()
         button.layer.cornerRadius = 5.0
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         return button
@@ -50,53 +57,72 @@ class ViewController: UIViewController {
         button.setTitle("SIGNUP", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = UIColor(red: 143/255, green: 11/255, blue: 65/255, alpha: 1.0)
+        button.backgroundColor = UIColor.dakshThemeColor()
         button.layer.cornerRadius = 5.0
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         return button
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.addSubview(brandingImage)
-        view.addSubview(userNameTextField)
         
+        centerYAnchor = brandingImage.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -140)
+        centerXAnchor = brandingImage.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        bottomAnchor = brandingImage.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         NSLayoutConstraint.activate(
             [brandingImage.heightAnchor.constraint(equalToConstant: 140),
              brandingImage.widthAnchor.constraint(equalToConstant: 280),
-             brandingImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-             brandingImage.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -140)
-//             brandingImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 80)
+             centerXAnchor!,
+             bottomAnchor!
             ])
         
         configureViews()
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        animateViews()
     }
     
     fileprivate func configureViews() {
         
-        let stackView = UIStackView(arrangedSubviews: [userNameTextField, passwordTextField, loginButton, signupButton])
+        stackView = UIStackView(arrangedSubviews: [userNameTextField, passwordTextField, loginButton, signupButton])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.distribution = .fillEqually
         stackView.axis = .vertical
         stackView.spacing = 14
+        stackView.alpha = 0
         view.addSubview(stackView)
+        stackViewTopAnchor = stackView.topAnchor.constraint(equalTo: brandingImage.bottomAnchor, constant: 40)
+        stackViewBottomAnchor = stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40)
+        
+//        stackView.anchor(top: nil, paddingTop: 0, left: view.leftAnchor, paddingLeft: 20, bottom: view.bottomAnchor, paddingBottom: -40, right: view.rightAnchor, paddingRight: -20, width: 0, height: 200)
+        
         
         NSLayoutConstraint.activate(
-            [stackView.topAnchor.constraint(equalTo: brandingImage.bottomAnchor, constant: 40),
+            [stackViewBottomAnchor!,
              stackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
              stackView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20),
              stackView.heightAnchor.constraint(equalToConstant: 200),
              ])
-        
     }
+    
+    fileprivate func animateViews() {
+        bottomAnchor?.isActive = false
+        centerYAnchor?.isActive = true
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        UIView.animate(withDuration: 0.5, delay: 0.1, usingSpringWithDamping: 4, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            self.view.layoutIfNeeded()
+        }, completion:  { (finished: Bool) -> Void in
+            
+            self.stackViewBottomAnchor?.isActive = false
+            self.stackViewTopAnchor?.isActive = true
+            UIView.animate(withDuration: 1.0, delay: 0.3, usingSpringWithDamping: 2, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+                self.view.layoutIfNeeded()
+                self.stackView.alpha = 1.0
+            }, completion: nil)
+        })
     }
-
-
 }
 
