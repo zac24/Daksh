@@ -97,9 +97,6 @@ class ViewController: UIViewController {
         stackViewTopAnchor = stackView.topAnchor.constraint(equalTo: brandingImage.bottomAnchor, constant: 40)
         stackViewBottomAnchor = stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40)
         
-//        stackView.anchor(top: nil, paddingTop: 0, left: view.leftAnchor, paddingLeft: 20, bottom: view.bottomAnchor, paddingBottom: -40, right: view.rightAnchor, paddingRight: -20, width: 0, height: 200)
-        
-        
         NSLayoutConstraint.activate(
             [stackViewBottomAnchor!,
              stackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
