@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
     
     var centerYAnchor : NSLayoutConstraint?
     var centerXAnchor : NSLayoutConstraint?
@@ -50,6 +50,7 @@ class ViewController: UIViewController {
         button.backgroundColor = UIColor.dakshThemeColor()
         button.layer.cornerRadius = 5.0
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        button.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         return button
     }()
     let signupButton :UIButton = {
@@ -60,11 +61,15 @@ class ViewController: UIViewController {
         button.backgroundColor = UIColor.dakshThemeColor()
         button.layer.cornerRadius = 5.0
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        button.addTarget(self, action: #selector(signupButtonTapped), for: .touchUpInside)
         return button
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.setNavigationUI()
+        self.title = LOGIN_TITLE
         
         view.addSubview(brandingImage)
         
@@ -120,6 +125,15 @@ class ViewController: UIViewController {
                 self.stackView.alpha = 1.0
             }, completion: nil)
         })
+    }
+    
+    @objc func signupButtonTapped() {
+        let signupView : SignupViewController = SignupViewController()
+        self.navigationController?.pushViewController(signupView, animated: true)
+    }
+    
+    @objc func loginButtonTapped() {
+        
     }
 }
 

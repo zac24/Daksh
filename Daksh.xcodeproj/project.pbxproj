@@ -13,6 +13,10 @@
 		A076F849216749BA00747D08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A076F848216749BA00747D08 /* Assets.xcassets */; };
 		A076F84C216749BA00747D08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A076F84A216749BA00747D08 /* LaunchScreen.storyboard */; };
 		A0792D4F21686BD100390665 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0792D4E21686BD100390665 /* Extentions.swift */; };
+		A0792D5221692D1E00390665 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0792D5121692D1E00390665 /* Default-568h@2x.png */; };
+		A0C8296C216A5780000A07BF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C8296B216A5780000A07BF /* BaseViewController.swift */; };
+		A0C8296E216A5961000A07BF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C8296D216A5961000A07BF /* Constant.swift */; };
+		A0C82971216A6274000A07BF /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C82970216A6274000A07BF /* SignupViewController.swift */; };
 		B36BCFCA3730319EB72F6792 /* Pods_Daksh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284BAFBC55C8B4C57164B44F /* Pods_Daksh.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +31,10 @@
 		A076F84B216749BA00747D08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A076F84D216749BA00747D08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0792D4E21686BD100390665 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		A0792D5121692D1E00390665 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		A0C8296B216A5780000A07BF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A0C8296D216A5961000A07BF /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		A0C82970216A6274000A07BF /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		A84F6ECA7DA4CCC04217696B /* Pods-Daksh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daksh.release.xcconfig"; path = "Pods/Target Support Files/Pods-Daksh/Pods-Daksh.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +70,7 @@
 		A076F835216749B800747D08 = {
 			isa = PBXGroup;
 			children = (
+				A0792D5121692D1E00390665 /* Default-568h@2x.png */,
 				A076F840216749B800747D08 /* Daksh */,
 				A076F83F216749B800747D08 /* Products */,
 				3EBE0258BC47DF90BF97CB5C /* Pods */,
@@ -81,8 +90,9 @@
 			isa = PBXGroup;
 			children = (
 				A0792D4D21686B3900390665 /* Utils */,
+				A0C8296F216A6244000A07BF /* Login & SignUp */,
+				A0C82968216A5699000A07BF /* JTHelper */,
 				A076F841216749B800747D08 /* AppDelegate.swift */,
-				A076F843216749B800747D08 /* ViewController.swift */,
 				A076F845216749B800747D08 /* Main.storyboard */,
 				A076F848216749BA00747D08 /* Assets.xcassets */,
 				A076F84A216749BA00747D08 /* LaunchScreen.storyboard */,
@@ -99,6 +109,24 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		A0C82968216A5699000A07BF /* JTHelper */ = {
+			isa = PBXGroup;
+			children = (
+				A0C8296B216A5780000A07BF /* BaseViewController.swift */,
+				A0C8296D216A5961000A07BF /* Constant.swift */,
+			);
+			path = JTHelper;
+			sourceTree = "<group>";
+		};
+		A0C8296F216A6244000A07BF /* Login & SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				A076F843216749B800747D08 /* ViewController.swift */,
+				A0C82970216A6274000A07BF /* SignupViewController.swift */,
+			);
+			path = "Login & SignUp";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,6 +138,8 @@
 				A076F83A216749B800747D08 /* Sources */,
 				A076F83B216749B800747D08 /* Frameworks */,
 				A076F83C216749B800747D08 /* Resources */,
+				A0792D5021692BE800390665 /* ShellScript */,
+				6771E83E9FD01AF9BCA006BE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A076F84C216749BA00747D08 /* LaunchScreen.storyboard in Resources */,
+				A0792D5221692D1E00390665 /* Default-568h@2x.png in Resources */,
 				A076F849216749BA00747D08 /* Assets.xcassets in Resources */,
 				A076F847216749B800747D08 /* Main.storyboard in Resources */,
 			);
@@ -168,6 +199,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6771E83E9FD01AF9BCA006BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Daksh/Pods-Daksh-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Daksh/Pods-Daksh-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		95B9E2387CE4C5BD05037162 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -186,6 +235,15 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A0792D5021692BE800390665 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" d4a84384dc6b6feddd4d7355899183b27e3cf06b dc9d1009d863539f018846601420889d4276528122c9194cb26eb04f7bc9c88e\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -193,7 +251,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0C82971216A6274000A07BF /* SignupViewController.swift in Sources */,
 				A076F844216749B800747D08 /* ViewController.swift in Sources */,
+				A0C8296C216A5780000A07BF /* BaseViewController.swift in Sources */,
+				A0C8296E216A5961000A07BF /* Constant.swift in Sources */,
 				A076F842216749B800747D08 /* AppDelegate.swift in Sources */,
 				A0792D4F21686BD100390665 /* Extentions.swift in Sources */,
 			);
@@ -343,7 +404,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9C458QZZ9J;
 				INFOPLIST_FILE = Daksh/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.janitri.Daksh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -359,7 +423,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9C458QZZ9J;
 				INFOPLIST_FILE = Daksh/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.janitri.Daksh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

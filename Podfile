@@ -7,6 +7,7 @@ target 'Daksh' do
 
 	pod 'Fabric'
 	pod 'Crashlytics'
+    pod 'Alamofire', '~> 4.7'
 
   # Pods for Daksh
 
