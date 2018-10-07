@@ -91,6 +91,7 @@
 		A076F840216749B800747D08 /* Daksh */ = {
 			isa = PBXGroup;
 			children = (
+				A0C82974216AA654000A07BF /* Network Manager */,
 				A0792D4D21686B3900390665 /* Utils */,
 				A0C8296F216A6244000A07BF /* Login & SignUp */,
 				A0C82968216A5699000A07BF /* JTHelper */,
@@ -128,6 +129,13 @@
 				A0C82970216A6274000A07BF /* JTSignupViewController.swift */,
 			);
 			path = "Login & SignUp";
+			sourceTree = "<group>";
+		};
+		A0C82974216AA654000A07BF /* Network Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Network Manager";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

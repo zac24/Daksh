@@ -30,3 +30,16 @@ let URL_Patient_Data                = "nurse/patient-details/"
 let URL_Nurse_Handover              = "nurse/hand-over/"
 
 let URL_Send_Data_Entry_Warnings    = "nurse/data-entry-warnings/"
+
+
+func signInUrl() -> String {
+    return DEV_BASE_URL + URL_Login
+}
+
+func signUpUrl() -> String {
+    return DEV_BASE_URL + URL_Signup
+}
+
+func verifyOtpUrl() -> String {
+    return DEV_BASE_URL + URL_Verify
+}
