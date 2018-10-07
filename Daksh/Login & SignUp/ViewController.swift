@@ -128,7 +128,7 @@ class ViewController: BaseViewController {
     }
     
     @objc func signupButtonTapped() {
-        let signupView : SignupViewController = SignupViewController()
+        let signupView : JTSignupViewController = JTSignupViewController()
         self.navigationController?.pushViewController(signupView, animated: true)
     }
     

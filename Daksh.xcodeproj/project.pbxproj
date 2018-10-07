@@ -16,7 +16,8 @@
 		A0792D5221692D1E00390665 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A0792D5121692D1E00390665 /* Default-568h@2x.png */; };
 		A0C8296C216A5780000A07BF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C8296B216A5780000A07BF /* BaseViewController.swift */; };
 		A0C8296E216A5961000A07BF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C8296D216A5961000A07BF /* Constant.swift */; };
-		A0C82971216A6274000A07BF /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C82970216A6274000A07BF /* SignupViewController.swift */; };
+		A0C82971216A6274000A07BF /* JTSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C82970216A6274000A07BF /* JTSignupViewController.swift */; };
+		A0C82973216A9E6F000A07BF /* JTUrlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C82972216A9E6F000A07BF /* JTUrlBuilder.swift */; };
 		B36BCFCA3730319EB72F6792 /* Pods_Daksh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284BAFBC55C8B4C57164B44F /* Pods_Daksh.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +35,8 @@
 		A0792D5121692D1E00390665 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A0C8296B216A5780000A07BF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A0C8296D216A5961000A07BF /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		A0C82970216A6274000A07BF /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		A0C82970216A6274000A07BF /* JTSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTSignupViewController.swift; sourceTree = "<group>"; };
+		A0C82972216A9E6F000A07BF /* JTUrlBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTUrlBuilder.swift; sourceTree = "<group>"; };
 		A84F6ECA7DA4CCC04217696B /* Pods-Daksh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daksh.release.xcconfig"; path = "Pods/Target Support Files/Pods-Daksh/Pods-Daksh.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,7 +106,6 @@
 		A0792D4D21686B3900390665 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				A0792D4E21686BD100390665 /* Extentions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -113,7 +114,9 @@
 			isa = PBXGroup;
 			children = (
 				A0C8296B216A5780000A07BF /* BaseViewController.swift */,
+				A0C82972216A9E6F000A07BF /* JTUrlBuilder.swift */,
 				A0C8296D216A5961000A07BF /* Constant.swift */,
+				A0792D4E21686BD100390665 /* Extentions.swift */,
 			);
 			path = JTHelper;
 			sourceTree = "<group>";
@@ -122,7 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				A076F843216749B800747D08 /* ViewController.swift */,
-				A0C82970216A6274000A07BF /* SignupViewController.swift */,
+				A0C82970216A6274000A07BF /* JTSignupViewController.swift */,
 			);
 			path = "Login & SignUp";
 			sourceTree = "<group>";
@@ -251,9 +254,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0C82971216A6274000A07BF /* SignupViewController.swift in Sources */,
+				A0C82971216A6274000A07BF /* JTSignupViewController.swift in Sources */,
 				A076F844216749B800747D08 /* ViewController.swift in Sources */,
 				A0C8296C216A5780000A07BF /* BaseViewController.swift in Sources */,
+				A0C82973216A9E6F000A07BF /* JTUrlBuilder.swift in Sources */,
 				A0C8296E216A5961000A07BF /* Constant.swift in Sources */,
 				A076F842216749B800747D08 /* AppDelegate.swift in Sources */,
 				A0792D4F21686BD100390665 /* Extentions.swift in Sources */,

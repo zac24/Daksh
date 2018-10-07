@@ -1,5 +1,5 @@
 //
-//  SignupViewController.swift
+//  JTSignupViewController.swift
 //  Daksh
 //
 //  Created by Prashant Dwivedi on 07/10/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignupViewController: BaseViewController {
+class JTSignupViewController: BaseViewController {
     
     let nameTextField :UITextField = {
         let tf = UITextField()
