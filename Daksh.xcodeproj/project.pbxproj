@@ -18,6 +18,8 @@
 		A0C8296E216A5961000A07BF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C8296D216A5961000A07BF /* Constant.swift */; };
 		A0C82971216A6274000A07BF /* JTSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C82970216A6274000A07BF /* JTSignupViewController.swift */; };
 		A0C82973216A9E6F000A07BF /* JTUrlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C82972216A9E6F000A07BF /* JTUrlBuilder.swift */; };
+		A0C82978216B52DB000A07BF /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C82977216B52DB000A07BF /* LoginModel.swift */; };
+		A0C8297A216B7BBC000A07BF /* JTRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C82979216B7BBC000A07BF /* JTRequest.swift */; };
 		B36BCFCA3730319EB72F6792 /* Pods_Daksh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284BAFBC55C8B4C57164B44F /* Pods_Daksh.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		A0C8296D216A5961000A07BF /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		A0C82970216A6274000A07BF /* JTSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTSignupViewController.swift; sourceTree = "<group>"; };
 		A0C82972216A9E6F000A07BF /* JTUrlBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTUrlBuilder.swift; sourceTree = "<group>"; };
+		A0C82977216B52DB000A07BF /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		A0C82979216B7BBC000A07BF /* JTRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTRequest.swift; sourceTree = "<group>"; };
 		A84F6ECA7DA4CCC04217696B /* Pods-Daksh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daksh.release.xcconfig"; path = "Pods/Target Support Files/Pods-Daksh/Pods-Daksh.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +122,7 @@
 				A0C82972216A9E6F000A07BF /* JTUrlBuilder.swift */,
 				A0C8296D216A5961000A07BF /* Constant.swift */,
 				A0792D4E21686BD100390665 /* Extentions.swift */,
+				A0C82979216B7BBC000A07BF /* JTRequest.swift */,
 			);
 			path = JTHelper;
 			sourceTree = "<group>";
@@ -125,8 +130,8 @@
 		A0C8296F216A6244000A07BF /* Login & SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				A076F843216749B800747D08 /* ViewController.swift */,
-				A0C82970216A6274000A07BF /* JTSignupViewController.swift */,
+				A0C82976216B522E000A07BF /* Model */,
+				A0C82975216B5203000A07BF /* ViewControllers */,
 			);
 			path = "Login & SignUp";
 			sourceTree = "<group>";
@@ -136,6 +141,23 @@
 			children = (
 			);
 			path = "Network Manager";
+			sourceTree = "<group>";
+		};
+		A0C82975216B5203000A07BF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A0C82970216A6274000A07BF /* JTSignupViewController.swift */,
+				A076F843216749B800747D08 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A0C82976216B522E000A07BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A0C82977216B52DB000A07BF /* LoginModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,8 +287,10 @@
 				A0C82971216A6274000A07BF /* JTSignupViewController.swift in Sources */,
 				A076F844216749B800747D08 /* ViewController.swift in Sources */,
 				A0C8296C216A5780000A07BF /* BaseViewController.swift in Sources */,
+				A0C8297A216B7BBC000A07BF /* JTRequest.swift in Sources */,
 				A0C82973216A9E6F000A07BF /* JTUrlBuilder.swift in Sources */,
 				A0C8296E216A5961000A07BF /* Constant.swift in Sources */,
+				A0C82978216B52DB000A07BF /* LoginModel.swift in Sources */,
 				A076F842216749B800747D08 /* AppDelegate.swift in Sources */,
 				A0792D4F21686BD100390665 /* Extentions.swift in Sources */,
 			);

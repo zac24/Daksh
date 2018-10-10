@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: BaseViewController {
     
@@ -117,7 +118,6 @@ class ViewController: BaseViewController {
         UIView.animate(withDuration: 0.5, delay: 0.1, usingSpringWithDamping: 4, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             self.view.layoutIfNeeded()
         }, completion:  { (finished: Bool) -> Void in
-            
             self.stackViewBottomAnchor?.isActive = false
             self.stackViewTopAnchor?.isActive = true
             UIView.animate(withDuration: 1.0, delay: 0.3, usingSpringWithDamping: 2, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
@@ -133,6 +133,8 @@ class ViewController: BaseViewController {
     }
     
     @objc func loginButtonTapped() {
+        
+//        Alamofire.request(URL_Login, method: .post, parameters: <#T##Parameters?#>, encoding: <#T##ParameterEncoding#>, headers: <#T##HTTPHeaders?#>)
         
     }
 }
