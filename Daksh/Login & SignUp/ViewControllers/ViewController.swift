@@ -136,6 +136,10 @@ class ViewController: BaseViewController {
         
 //        Alamofire.request(URL_Login, method: .post, parameters: <#T##Parameters?#>, encoding: <#T##ParameterEncoding#>, headers: <#T##HTTPHeaders?#>)
         
+//        let postDict = [String:Any] = ["username : nurse@mp.com", "password":"test" ]()
+        
+        
+        
     }
 }
 
